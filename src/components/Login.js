@@ -32,7 +32,7 @@ const Login = (props) => {
         />
         <p className="errorMsg">{passwordError}</p>
         <div className="btnContainer">
-          <button onClick={handleLogin}>Sign in</button>
+          <button onClick={handleLogin}>Log in</button>
         </div>
       </div>
     </section>
