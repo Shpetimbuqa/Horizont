@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import About from "./About";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import logo from "../image/Logo-Horizont.jpeg";
 import image1 from "../image/1.jpg";
@@ -26,10 +27,15 @@ export default function Header({ handleLogout }) {
               <li>
                 <NavLink to="/about">About</NavLink>
               </li>
+
               <li>
                 <NavLink to="/login">Log in </NavLink>
               </li>
-            
+              <li>
+                <NavLink to="/" onClick={handleLogout}>
+                  Log out{" "}
+                </NavLink>
+              </li>
             </ul>
           </div>
         </nav>
@@ -116,66 +122,9 @@ export default function Header({ handleLogout }) {
           </li>
         </ul>
       </section>
-      {/* <section className="section-testimonials">
-        <div className="row">
-          <h2>About</h2>
-          <th className="col span-1-of-3">
-            <h2>Horizont</h2>
-            <blockquote>
-              Lokacioni i Restaurant “HORIZONT” <br/>është në rrugën Shpetim
-              Bojku-Tabje, Pejë
-            </blockquote>
-          </th>
-          <th className="col span-1-of-3">
-            <h2 className="orari-position">Orari i Punës</h2>
-            <ul>
-              <li class="d-flex">
-                <span>E hënë: 09:00 - 23:00</span>
-              </li>
-              <li class="d-flex">
-                <span>E martë: 09:00 - 23:00</span>
-              </li>
-              <li class="d-flex">
-                <span>E mërkurë: 09:00 - 23:00</span>
-              </li>
-              <li class="d-flex">
-                <span>E enjte: 09:00 - 23:00</span>
-              </li>
-              <li class="d-flex">
-                <span>E premte: 09:00 - 23:00</span>
-              </li>
-              <li class="d-flex">
-                <span>E shtunë: 09:00 - 23:00</span>
-              </li>
-              <li class="d-flex">
-                <span>E diel: 09:00 - 23:00</span>
-              </li>
-            </ul>
-          </th>
-          <th className="col span-1-of-3">
-            <h2 style={{textAlign: 'right'}}>Instagram</h2>
-            <blockquote>
-              
-            </blockquote>
-          </th>
-        </div>
-      </section> */}
-      {/* <section className="section-testimonials">
-        <h2>About</h2>
-        <div className="row">
-          <div className="col span-1-of-3">
-            <p className="horizonti-position">Horizont</p>
-            <p>
-              Lokacioni i Restaurant “HORIZONT”
-              <br /> është në rrugën Shpetim Bojku-Tabje,
-              <br /> Pejë
-            </p>
-          </div>
-          <div className="col span-1-of-3">
-            <p className="orari-position">hello</p>
-          </div>
-        </div>
-      </section> */}
+      <footer>
+        <About />
+      </footer>
     </div>
   );
 }

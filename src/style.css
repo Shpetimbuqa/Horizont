@@ -653,3 +653,21 @@ button {
   font-size: 16px;
 }
 
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+.about {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(image/back-customers.jpg); */
+  background-color: default;
+    background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}

@@ -40,6 +40,23 @@ export default function AfterLogin() {
       });
   };
 
+  const handleSignup = () => {
+    clearErrors();
+    fire
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .catch((err) => {
+        switch (err.code) {
+          case "auth/email-already-in-use":
+          case "auth/invalid-email":
+            setEmailError(err.message);
+            break;
+          case "auth/weak-password":
+            setPasswordError(err.message);
+            break;
+        }
+      });
+  };
 
   const handleLogout = () => {
     fire.auth().signOut();
