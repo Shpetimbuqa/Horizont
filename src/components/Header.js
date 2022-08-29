@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import About from "./About";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../image/Logo-Horizont.jpeg";
 import image1 from "../image/1.jpg";
 import image2 from "../image/2.jpg";

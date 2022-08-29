@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import fire from "./firebase/config";
 import Header from "./components/Header";
-import Login from "./components/Login";
+import Login from "./components/LoginForm";
 
 export default function AfterLogin() {
   const [user, setUser] = useState("");
